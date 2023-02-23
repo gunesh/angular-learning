@@ -1,4 +1,11 @@
-<hello name="{{ name }}"></hello>
-<p>Start editing to see some magic happen :) ok</p>
-<app-drawer [menuItems]="menuItems" (onHandleSubMenuClick)="onSubMenuClick($event)"
-[showMenuBar]="showMenuBar">Drawer</app-drawer>
+<div style="display: flex;">
+  <div>
+    <app-drawer
+      [menuItems]="menuItems"
+      (onHandleSubMenuClick)="onSubMenuClick($event)"
+      [showMenuBar]="showMenuBar"
+      >Drawer</app-drawer
+    >
+  </div>
+  <div style="width:100%;margin-left: 70px;">Test</div>
+</div>
