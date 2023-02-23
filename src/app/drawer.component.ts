@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { Router } from '@angular/router';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -27,7 +28,13 @@ export class DrawerComponent
   @Input() showMenuBar: boolean;
   @Output() onHandleSubMenuClick = new EventEmitter();
 
-  ngOnInit(): void {}
+  constructor(private router: Router) {
+    console.log('Constructor:')
+   }
+
+  ngOnInit(): void {
+    console.log('ngOnInit:')
+  }
 
   ngOnChanges() {
     this.render();
@@ -38,6 +45,8 @@ export class DrawerComponent
   }
 
   ngOnDestroy(): void {}
+
+  
 
   public onSubMenuClick = (key) => {
     this.onHandleSubMenuClick.emit(key);
