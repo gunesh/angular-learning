@@ -1,5 +1,6 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+// import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Router } from '@angular/router';
 import {
   AfterViewInit,
@@ -23,6 +24,7 @@ export class MaterialTableComponent
   implements OnInit, OnChanges, AfterViewInit, OnDestroy
 {
   public rootId = 'table';
+
   @Input() columns = [];
   @Input() data = [];
   @Input() title = 'Test table';
@@ -33,7 +35,7 @@ export class MaterialTableComponent
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit:');
+    console.log('ngOnInit:', this.columns, this.data, this.title);
   }
 
   ngOnChanges() {
@@ -51,13 +53,15 @@ export class MaterialTableComponent
   };
 
   private render() {
-    ReactDOM.render(
+    const rootElement = document.getElementById(this.rootId);
+    const root = createRoot(rootElement);
+
+    root.render(
       React.createElement(MaterialTable, {
         columns: this.columns,
         data: this.data,
         title: this.title,
-      }),
-      document.getElementById(this.rootId)
+      })
     );
   }
 }
