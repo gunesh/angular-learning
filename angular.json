@@ -24,8 +24,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/adintel-lib-poc/dist/adintel-lib-poc.cjs.development.css",
-              "node_modules/adintel-lib-drawer/dist/adintel-lib-drawer.cjs.development.css"
+              "node_modules/adintel-lib-poc/dist/adintel-lib-poc.cjs.development.css"
             ],
             "scripts": []
           },
@@ -75,8 +74,7 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               "styles.css",
-              "node_modules/adintel-lib-poc/dist/adintel-lib-poc.cjs.development.css",
-              "node_modules/adintel-lib-drawer/dist/adintel-lib-drawer.cjs.development.css"
+              "node_modules/adintel-lib-poc/dist/adintel-lib-poc.cjs.development.css"
             ],
             "scripts": [],
             "assets": [
