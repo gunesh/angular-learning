@@ -23,7 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/adintel-lib-poc/dist/adintel-lib-poc.cjs.development.css",
+              "node_modules/adintel-lib-drawer/dist/adintel-lib-drawer.cjs.development.css"
             ],
             "scripts": []
           },
@@ -72,7 +74,9 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "styles.css"
+              "styles.css",
+              "node_modules/adintel-lib-poc/dist/adintel-lib-poc.cjs.development.css",
+              "node_modules/adintel-lib-drawer/dist/adintel-lib-drawer.cjs.development.css"
             ],
             "scripts": [],
             "assets": [
