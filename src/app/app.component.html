@@ -1,12 +1,18 @@
 <div style="display: flex;">
   <div>
-    <app-drawer
+    <!-- <app-drawer
       [menuItems]="menuItems"
       (onHandleSubMenuClick)="onSubMenuClick($event)"
       [showMenuBar]="showMenuBar"
       >Drawer</app-drawer
     >
-    Search Example
+    Search Example -->
+
+    <app-table 
+      [columns]="columns"
+      [data]="data"
+      [title]="title"
+    ></app-table>
     <react-custom-search>SS</react-custom-search>
   </div>
   <div style="width:100%;margin-left: 70px;">Test</div>
