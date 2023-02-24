@@ -2,11 +2,21 @@
 
 <div *ngIf="showAddForm">
   <h2>Form example</h2>
-  <form #usersForm (ngSubmit)="getUserFormData({})">
-  <input type="text" ngModel name="username" placeholder="Enter Name" /><br /><br />
-  <input type="text" ngModel name="email" placeholder="Enter Email" /><br /><br />
-  <button type="button" (click)="onAddCancelAction()">Cancel</button>
-  <button type="submit">Save</button>
+  <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+    <input
+      type="text"
+      ngModel
+      name="username"
+      placeholder="Enter Name"
+    /><br /><br />
+    <input
+      type="text"
+      ngModel
+      name="email"
+      placeholder="Enter Email"
+    /><br /><br />
+    <button type="button" (click)="onAddCancelAction()">Cancel</button>
+    <button type="submit">Save</button>
   </form>
 </div>
 <table width="100%" [attr.border]="1">
