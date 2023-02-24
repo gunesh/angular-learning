@@ -31,7 +31,9 @@ export class UsersComponent implements OnInit {
     });
   }
   onDelete(id: number) {
-    console.log(id);
+    this.userData.deleteUser(id).subscribe((resp:any)=>{
+      console.log(resp);
+    });
   }
   onGetUsers() {
     this.userData.users().subscribe((resp: any) => {
@@ -48,9 +50,13 @@ export class UsersComponent implements OnInit {
     return this.users;
   }
   onUpdate(id: number) {
-    console.log(id);
+    this.userData.updateUser(id).subscribe((resp:any)=>{
+      console.log(resp);
+    });
   }
   onView(id: number) {
-    console.log(id);
+    this.userData.viewUser(id).subscribe((resp:any)=>{
+      console.log(resp);
+    });
   }
 }
