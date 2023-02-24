@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: '', component: ExampleComponent },
   { path: 'search', component: ExampleComponent },
   { path: 'users', component: UsersComponent },
+  { path: 'user/:id', component: UsersComponent },
   { path: 'classification', component: TestComponent },
   {
     path: '**',
