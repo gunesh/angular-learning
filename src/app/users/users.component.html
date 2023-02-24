@@ -1,4 +1,10 @@
-<button (click)="onAdd({})">Add New</button>
+<button *ngIf="!showAddForm" (click)="onAddCancelAction()">Add New</button>
+
+<div *ngIf="showAddForm">
+  Show Form
+  <h2>Form example</h2>
+  <button (click)="onAddCancelAction()">Cancel</button>
+</div>
 <table width="100%" [attr.border]="1">
   <tr>
     <th>Actions</th>

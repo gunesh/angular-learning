@@ -11,8 +11,13 @@ export class UsersComponent implements OnInit {
   constructor(private userData: UsersService) {
     this.onGetUsers();
   }
+  showAddForm: boolean = false;
 
   ngOnInit(): void {}
+
+  onAddCancelAction() {
+    this.showAddForm = !this.showAddForm;
+  }
   onDelete(id: number) {
     console.log(id);
   }
