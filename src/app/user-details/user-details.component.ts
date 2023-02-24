@@ -9,9 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 export class UserDetailsComponent implements OnInit {
   users: any;
   constructor(private route: ActivatedRoute) {}
-
+  id: number = 0;
   ngOnInit() {
-    console.warn(this.route.snapshot.paramMap.get('id'));
+    this.id = this.route.snapshot.paramMap.get('id');
+    console.warn(id);
+
     // this.api.get('users?page=1').subscribe((res) => {
     //   this.users = res;
     //   console.log('data response', this.users);
