@@ -15,9 +15,16 @@ export class UserDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.api.get('users?page=1').subscribe((res) => {
-      this.users = res;
-      console.log('data response', this.users);
-    });
+    // this.api.get('users?page=1').subscribe((res) => {
+    //   this.users = res;
+    //   console.log('data response', this.users);
+    // });
+
+    this.api.getFoodFacts('users?page=1').subscribe(response =>{
+     console.log(response);
+
+  });
+
+
   }
 }
