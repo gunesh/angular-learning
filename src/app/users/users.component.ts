@@ -31,9 +31,13 @@ export class UsersComponent implements OnInit {
     });
   }
   onDelete(id: number) {
-    this.userData.deleteUser(id).subscribe((resp:any)=>{
-      console.log(resp);
-    });
+    if (confirm('Confirm want to delete this record')) {
+      this.userData.deleteUser(id).subscribe((resp: any) => {
+        console.log(resp);
+      });
+    } else {
+      console.log('Delete canceled');
+    }
   }
   onGetUsers() {
     this.userData.users().subscribe((resp: any) => {
@@ -50,12 +54,12 @@ export class UsersComponent implements OnInit {
     return this.users;
   }
   onUpdate(id: number) {
-    this.userData.updateUser(id).subscribe((resp:any)=>{
+    this.userData.updateUser(id).subscribe((resp: any) => {
       console.log(resp);
     });
   }
   onView(id: number) {
-    this.userData.viewUser(id).subscribe((resp:any)=>{
+    this.userData.viewUser(id).subscribe((resp: any) => {
       console.log(resp);
     });
   }
