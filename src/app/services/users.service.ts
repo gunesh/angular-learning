@@ -10,8 +10,13 @@ const API_URL = 'https://reqres.in';
 @Injectable()
 export class UsersService {
   constructor(private http: HttpClient) {}
+
   public get(url): Observable<any> {
     return this.http.get(API_URL + '/api/' + url).pipe(map((res) => res));
+  }
+
+  users() {
+    return this.http.get(`https://reqres.in/api/users?per_page=200`);
   }
 
   public getFoodFacts(id: string): Observable<any> {

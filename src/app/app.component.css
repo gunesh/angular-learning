@@ -1,3 +1,9 @@
 p {
   font-family: Lato;
 }
+.nav-item {
+  display: inline-flex;
+}
+.nav li:hover{
+  background-color: #ccc;
+}

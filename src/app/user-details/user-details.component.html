@@ -1,6 +1,11 @@
+User Details : {{ id }}
 
-<button (click)="onAdd({})">Add New</button>
-<table width="100%" [attr.border]="1">
+<!-- Page:{{ users.page }}<br />
+Per Page:{{ users.per_page }}<br />
+Total:{{ users.total }}<br />
+Total Pages:{{ users.total_pages }}<br /> -->
+
+<table width="100%" border="1">
   <tr>
     <th>Actions</th>
     <th>ID</th>
@@ -10,9 +15,7 @@
 
   <tr *ngFor="let user of users.data">
     <td>
-      <a (click)="onDelete(user.id)">D</a>&nbsp;
-      <a (click)="onView(user.id)">E</a>&nbsp;
-      <a (click)="onUpdate(user.id)">V</a>
+      <button (click)="onDelete(user.id)">Delete</button>
     </td>
     <td>{{ user.id }}</td>
     <td>{{ user.email }}</td>
