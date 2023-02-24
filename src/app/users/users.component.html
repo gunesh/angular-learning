@@ -30,8 +30,8 @@
   <tr *ngFor="let user of users">
     <td>
       <a (click)="onDelete(user.id)">D</a>&nbsp;
-      <a (click)="onView(user.id)">E</a>&nbsp;
-      <a (click)="onUpdate(user.id)">V</a>
+      <a (click)="onUpdate(user.id)">E</a>&nbsp;
+      <a (click)="onView(user.id)">V</a>
     </td>
     <td>{{ user.id }}</td>
     <td>{{ user.email | lowercase }}</td>
