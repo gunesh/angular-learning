@@ -23,7 +23,16 @@ export class AddEditUserComponent implements OnInit {
   myForm() {
     this.requiredForm = this.fb.group({
       name: ['', Validators.required],
+      email: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$'),
+        ],
+      ],
     });
   }
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.requiredForm);
+  }
 }

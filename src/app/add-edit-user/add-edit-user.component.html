@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <h2>Required Field validation</h2>
   <form [formGroup]="requiredForm" novalidate>
     <div class="form-group">
@@ -21,24 +21,48 @@
   </form>
   <p>Form value: {{ requiredForm.value | json }}</p>
   <p>Form status: {{ requiredForm.status | json }}</p>
-</div>
+</div> -->
 
 <div>
-<h2>
-  Required Field validation
-</h2>
-<form [formGroup]="requiredForm" novalidate>
-      <div class="form-group">
-        <label class="center-block">Name:
-          <input class="form-control" formControlName="name">
-        </label>
+  <h2>Required Field validation</h2>
+  <form [formGroup]="requiredForm" novalidate>
+    <div class="form-group">
+      <label class="center-block"
+        >Name:
+        <input class="form-control" formControlName="name" />
+      </label>
+    </div>
+    <span
+      *ngIf="
+        requiredForm.controls['name'].invalid &&
+        requiredForm.controls['name'].touched
+      "
+      class="alertc alert-danger error"
+    >
+      <span *ngIf="requiredForm.controls['name'].errors.required">
+        Name is required.
+      </span>
+    </span>
+
+    <div class="form-group">
+      <label class="center-block"
+        >Email:
+        <input class="form-control" formControlName="email" />
+      </label>
+    </div>
+    <div
+      *ngIf="
+        requiredForm.controls['email'].invalid &&
+        requiredForm.controls['email'].touched
+      "
+      class="alert-danger error"
+    >
+      <div *ngIf="requiredForm.controls['email'].errors.required">
+        Email is required.
       </div>
-      <div *ngIf="requiredForm.controls['name'].invalid && requiredForm.controls['name'].touched" class="alert alert-danger">
-          <div *ngIf="requiredForm.controls['name'].errors.required">
-          Name is required.
-        </div>
-      </div>
-</form>
-<p>Form value: {{ requiredForm.value | json }}</p>
-<p>Form status: {{ requiredForm.status | json }}</p>
+    </div>
+  </form>
+
+  <p>Form value: {{ requiredForm.value | json }}</p>
+  <p>Form status: {{ requiredForm.status | json }}</p>
 </div>
