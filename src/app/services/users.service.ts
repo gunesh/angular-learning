@@ -13,4 +13,10 @@ export class UsersService {
   public get(url): Observable<any> {
     return this.http.get(API_URL + '/api/' + url).pipe(map((res) => res));
   }
+
+  public getFoodFacts(id: string): Observable<any> {
+    //Write code calling service to obtain food fact data
+    let url = `https://reqres.in/api/product/${id}.json`;
+    return this.http.get(url);
+  }
 }
