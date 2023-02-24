@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-details',
@@ -7,9 +8,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./user-details.component.css'],
 })
 export class UserDetailsComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(private httpClient: HttpClient,private route: ActivatedRoute) {}
 
   ngOnInit() {
     console.log(this.route.snapshot.params.id);
+
+    const response = this.httpClient.get(`https://jsonplaceholder.typicode.com/todos/1`);
+    console.log(response);
   }
 }
