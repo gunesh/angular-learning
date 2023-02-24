@@ -7,6 +7,8 @@ import { UsersService } from '../services/users.service';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
+  selectedId: any = 0;
+  viewDetails: any;
   users: any = [];
   data: any = [];
   page: any = 1;
@@ -34,7 +36,7 @@ export class UsersComponent implements OnInit {
     if (confirm('Confirm want to delete this record')) {
       this.userData.deleteUser(id).subscribe((resp: any) => {
         console.log(resp);
-        this.users = this.users.filter((item:any)=>id !== item.id)
+        this.users = this.users.filter((item: any) => id !== item.id);
       });
     } else {
       console.log('Delete canceled');
@@ -62,6 +64,8 @@ export class UsersComponent implements OnInit {
   onView(id: number) {
     this.userData.viewUser(id).subscribe((resp: any) => {
       console.log(resp);
+      this.viewDetails = resp.data;
+      this.selectedId = id;
     });
   }
 }

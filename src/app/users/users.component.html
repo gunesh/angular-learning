@@ -32,6 +32,11 @@
       <a (click)="onDelete(user.id)">D</a>&nbsp;
       <a (click)="onUpdate(user.id)">E</a>&nbsp;
       <a (click)="onView(user.id)">V</a>
+
+      <div *ngIf="user.id===selectedId">
+      {{user.id}}
+      <img src="{{user.avatar}}" />
+      </div>
     </td>
     <td>{{ user.id }}</td>
     <td>{{ user.email | lowercase }}</td>
