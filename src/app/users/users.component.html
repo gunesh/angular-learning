@@ -1,9 +1,11 @@
 <button *ngIf="!showAddForm" (click)="onAddCancelAction()">Add New</button>
 
 <div *ngIf="showAddForm">
-  Show Form
   <h2>Form example</h2>
+  <input type="text" name="username" placeholder="Enter Name" /><br /><br />
+  <input type="text" name="email" placeholder="Enter Email" /><br /><br />
   <button (click)="onAddCancelAction()">Cancel</button>
+  <button (click)="onAddCancelAction()">Save</button>
 </div>
 <table width="100%" [attr.border]="1">
   <tr>
