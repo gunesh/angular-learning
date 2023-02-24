@@ -2,11 +2,11 @@
 
 <div *ngIf="showAddForm">
   <h2>Form example</h2>
-  <form #userForm (ngSubmit)="getUserFormData">
+  <form #usersForm (ngSubmit)="getUserFormData({})">
   <input type="text" ngModel name="username" placeholder="Enter Name" /><br /><br />
   <input type="text" ngModel name="email" placeholder="Enter Email" /><br /><br />
-  <button (click)="onAddCancelAction()">Cancel</button>
-  <button >Save</button>
+  <button type="button" (click)="onAddCancelAction()">Cancel</button>
+  <button type="submit">Save</button>
   </form>
 </div>
 <table width="100%" [attr.border]="1">
