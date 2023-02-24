@@ -34,6 +34,7 @@ export class UsersComponent implements OnInit {
     if (confirm('Confirm want to delete this record')) {
       this.userData.deleteUser(id).subscribe((resp: any) => {
         console.log(resp);
+        this.users = this.users.filter((item:any)=>id !== item.id)
       });
     } else {
       console.log('Delete canceled');
