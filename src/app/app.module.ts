@@ -8,10 +8,18 @@ import { HelloComponent } from './hello/hello.component';
 import { DrawerComponent } from './drawer/drawer.component';
 import { MaterialTableComponent } from './mtable/mtable.component';
 import { ReactSearchComponent } from './search/search.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
-  imports: [BrowserModule,AppRoutingModule, FormsModule],
-  declarations: [AppComponent, HelloComponent,DrawerComponent,ReactSearchComponent,MaterialTableComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    DrawerComponent,
+    ReactSearchComponent,
+    MaterialTableComponent,
+    UsersComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
