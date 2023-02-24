@@ -27,7 +27,7 @@
     <th>Name</th>
   </tr>
 
-  <tr *ngFor="let user of users.data">
+  <tr *ngFor="let user of users">
     <td>
       <a (click)="onDelete(user.id)">D</a>&nbsp;
       <a (click)="onView(user.id)">E</a>&nbsp;

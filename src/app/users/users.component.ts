@@ -38,7 +38,7 @@ export class UsersComponent implements OnInit {
     console.log(id);
   }
   onGetUsers() {
-    this.userData.users().subscribe((resp) => {
+    this.userData.users().subscribe((resp: any) => {
       console.log(resp);
       this.users = resp.data;
       this.page = resp.page;
