@@ -20,7 +20,7 @@ export class UsersComponent implements OnInit {
   }
   getUserFormData(data: any) {
     console.log(data);
-    this.userData.addUser().subscribe((data)=>{
+    this.userData.addUser(data).subscribe((data)=>{
       console.log(data)
     })
     this.showAddForm = !this.showAddForm;

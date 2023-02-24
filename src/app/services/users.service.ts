@@ -12,7 +12,11 @@ export class UsersService {
     return this.http.get(`https://reqres.in/api/users?per_page=200`);
   }
 
-  public addUser() {
-    return this.http.get(`https://reqres.in/api/users?per_page=200`);
+  public addUser(obj: any) {
+    console.log(obj);
+    return this.http.post(`https://reqres.in/api/user`, {
+      name: 'morpheus',
+      job: 'leader',
+    });
   }
 }
