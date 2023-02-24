@@ -8,6 +8,12 @@ import { UsersService } from '../services/users.service';
 })
 export class UsersComponent implements OnInit {
   users: any = [];
+  data:any=[] 
+  page:any=1  
+  per_page:any=1 
+  support:any={}  
+  total:any=0   
+  total_pages:any=0
   constructor(private userData: UsersService) {
     this.onGetUsers();
   }
@@ -19,10 +25,14 @@ export class UsersComponent implements OnInit {
     this.showAddForm = !this.showAddForm;
   }
   getUserFormData(data: any) {
-    this.userData.addUser(data).subscribe((data) => {
-      console.log(data);
+    this.userData.addUser(data).subscribe((res) => {
+      console.log(res);
+      let tmp = this.users;
+      console.log('tmp', tmp);
+      this.users = [...tmp, res];
+      console.log(this.users);
+      this.showAddForm = !this.showAddForm;
     });
-    this.showAddForm = !this.showAddForm;
   }
   onDelete(id: number) {
     console.log(id);
