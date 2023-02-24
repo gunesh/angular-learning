@@ -18,6 +18,9 @@ export class UsersComponent implements OnInit {
   onAddCancelAction() {
     this.showAddForm = !this.showAddForm;
   }
+  getUserFormData(data: any) {
+    console.log(data);
+  }
   onDelete(id: number) {
     console.log(id);
   }
