@@ -8,12 +8,12 @@ import { UsersService } from '../services/users.service';
 })
 export class UsersComponent implements OnInit {
   users: any = [];
-  data:any=[] 
-  page:any=1  
-  per_page:any=1 
-  support:any={}  
-  total:any=0   
-  total_pages:any=0
+  data: any = [];
+  page: any = 1;
+  per_page: any = 1;
+  support: any = {};
+  total: any = 0;
+  total_pages: any = 0;
   constructor(private userData: UsersService) {
     this.onGetUsers();
   }
@@ -38,8 +38,15 @@ export class UsersComponent implements OnInit {
     console.log(id);
   }
   onGetUsers() {
-    this.userData.users().subscribe((data) => {
-      this.users = data;
+    this.userData.users().subscribe((resp) => {
+      console.log(resp);
+      this.users = resp.data;
+      this.page = resp.page;
+      this.page = resp.page;
+      this.per_page = resp.per_page;
+      this.support = resp.support;
+      this.total = resp.total;
+      this.total_pages = resp.total_pages;
     });
   }
   userList() {
