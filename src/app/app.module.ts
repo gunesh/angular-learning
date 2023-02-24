@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
@@ -13,8 +14,10 @@ import { ReactSearchComponent } from './search/search.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 
+import { AddEditUserComponent } from './add-edit-user/add-edit-user.component';
+
 @NgModule({
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   declarations: [
     AppComponent,
     HelloComponent,
@@ -23,6 +26,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     MaterialTableComponent,
     UsersComponent,
     UserDetailsComponent,
+    AddEditUserComponent,
   ],
   bootstrap: [AppComponent],
 })
