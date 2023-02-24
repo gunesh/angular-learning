@@ -20,6 +20,10 @@ export class UsersComponent implements OnInit {
   }
   getUserFormData(data: any) {
     console.log(data);
+    this.userData.addUser().subscribe((data)=>{
+      console.log(data)
+    })
+    this.showAddForm = !this.showAddForm;
   }
   onDelete(id: number) {
     console.log(id);
@@ -35,7 +39,6 @@ export class UsersComponent implements OnInit {
   onUpdate(id: number) {
     console.log(id);
   }
-  onAdd(obj: any) {}
   onView(id: number) {
     console.log(id);
   }
