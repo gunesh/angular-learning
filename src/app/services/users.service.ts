@@ -18,4 +18,17 @@ export class UsersService {
       job: 'leader',
     });
   }
+  public updateUser(id: number) {
+    return this.http.put(`https://reqres.in/api/users/${id}`, {
+      name: 'morpheus',
+      job: 'leader',
+    });
+  }
+
+  public deleteUser(id: number) {
+    return this.http.delete(`https://reqres.in/api/users/${id}`);
+  }
+  public viewUser(id: number) {
+    return this.http.get(`https://reqres.in/api/users/${id}`);
+  }
 }
