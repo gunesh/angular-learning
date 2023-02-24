@@ -65,7 +65,11 @@ export class UsersComponent implements OnInit {
     this.userData.viewUser(id).subscribe((resp: any) => {
       console.log(resp);
       this.viewDetails = resp.data;
-      this.selectedId = id;
+      if (this.selectedId === id) {
+        this.selectedId = 0;
+      } else {
+        this.selectedId = id;
+      }
     });
   }
 }
