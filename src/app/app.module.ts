@@ -9,7 +9,7 @@ import { DrawerComponent } from './drawer/drawer.component';
 import { MaterialTableComponent } from './mtable/mtable.component';
 import { ReactSearchComponent } from './search/search.component';
 import { UsersComponent } from './users/users.component';
-import {UserDetailsComponent} from './user-details/user-details.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   imports: [BrowserModule, AppRoutingModule, FormsModule],
@@ -20,7 +20,7 @@ import {UserDetailsComponent} from './user-details/user-details.component';
     ReactSearchComponent,
     MaterialTableComponent,
     UsersComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
   ],
   bootstrap: [AppComponent],
 })
