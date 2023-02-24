@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { DrawerComponent } from './drawer/drawer.component';
 import { MaterialTableComponent } from './mtable/mtable.component';
-
 import { ReactSearchComponent } from './search/search.component';
 
 @NgModule({
