@@ -19,10 +19,9 @@ export class UsersComponent implements OnInit {
     this.showAddForm = !this.showAddForm;
   }
   getUserFormData(data: any) {
-    console.log(data);
-    this.userData.addUser(data).subscribe((data)=>{
-      console.log(data)
-    })
+    this.userData.addUser(data).subscribe((data) => {
+      console.log(data);
+    });
     this.showAddForm = !this.showAddForm;
   }
   onDelete(id: number) {

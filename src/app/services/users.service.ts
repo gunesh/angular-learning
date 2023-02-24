@@ -13,7 +13,6 @@ export class UsersService {
   }
 
   public addUser(obj: any) {
-    console.log(obj);
     return this.http.post(`https://reqres.in/api/user`, {
       name: 'morpheus',
       job: 'leader',
